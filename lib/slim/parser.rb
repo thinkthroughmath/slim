@@ -390,7 +390,7 @@ module Slim
 
       # Check to see if there is a delimiter right after the tag name
       delimiter = nil
-      if @line =~ ATTR_DELIM_REGEX && $&.size <= 1
+      if @line =~ ATTR_DELIM_REGEX
         delimiter = DELIMITERS[$&]
         @line.slice!(0)
       end
